@@ -11,7 +11,7 @@ export default function Home() {
   return (
     <div className={styles.container}>
       <Head>
-        <title> Brax's Portfolio </title>
+        <title> Brax Portfolio </title>
           <meta name="description" content="Welcome to Brax's Portfolio">
           </meta>
       </Head>
@@ -21,7 +21,7 @@ export default function Home() {
         </div>
         <div className="Content">
           <h1 className={styles.title}>
-            Brax's Portfolio
+            Brax Portfolio
           </h1>
           <a href="#about" className={styles.button}>
             Enter
