@@ -19,13 +19,10 @@ export default function Home() {
       <div className="Background">
         <div className={styles.background}>
         </div>
-        <div className="Content">
+        <div>
           <h1 className={styles.title}>
             Brax Portfolio
           </h1>
-          <a href="#about" className={styles.button}>
-            Enter
-          </a>
         </div>
       </div>
     </div>

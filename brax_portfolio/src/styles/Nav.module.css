@@ -1,0 +1,28 @@
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.8); /* White background with opacity */
+    backdrop-filter: blur(10px); /* Optional: adds a blur effect to the background */
+    padding: 10px 20px; /* Add padding for better spacing */
+    border-radius: 8px; /* Optional: add rounded corners */
+}
+
+.text {
+    color: black;
+    padding-right: 100px;
+}
+
+.text:hover {
+    animation: shadow-dance 2s;
+}
+
+@keyframes shadow-dance {
+    0%, 100% {
+        text-shadow: 5px 5px 0 #ff005e, 10px 10px 0 #00d4ff;
+    }
+    50% {
+        text-shadow: -5px -5px 0 #00d4ff, -10px -10px 0 #ff005e;
+    }
+}
