@@ -1,8 +1,8 @@
 'use client'
-import Image from "next/image";
 import styles from '../styles/Home.module.css'
 import { createContext } from "react";
 import Nav from './Components/nav'
+import Footer from './Components/footer'
 import Head from 'next/head'
 
 const Context = createContext()
@@ -25,6 +25,7 @@ export default function Home() {
           </h1>
         </div>
       </div>
+      <Footer/>
     </div>
   );
 }

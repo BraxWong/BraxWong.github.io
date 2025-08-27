@@ -1,5 +1,6 @@
 'use client'
 import Nav from '../Components/nav'
+import Footer from '../Components/footer'
 import Head from 'next/head'
 import { createContext } from 'react';
 
@@ -12,6 +13,7 @@ export default function About() {
             <h1>
                 About
             </h1>
+            <Footer/>
         </div>
     );
 }
