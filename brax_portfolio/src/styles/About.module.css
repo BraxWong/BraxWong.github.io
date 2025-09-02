@@ -1,0 +1,43 @@
+.row {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 75vh; 
+}
+
+.column {
+    flex: 50%;      
+    text-align: center; 
+    margin-top: 100px;
+}
+
+.picture {
+    background-image: url('../../public/About_Page_Picture.jpeg');
+    background-size: cover;
+    background-position: center;
+    height: 500px;
+    margin-left: 100px;
+}
+
+.about {
+    font-family: Arial, sans-serif;
+    font-size: 30px;
+    text-align: left;
+    margin-left: 10px;
+    font-weight: bold;
+    margin-top: 20px;
+}
+
+.paragraph {
+    font-family: Arial, sans-serif;
+    text-align: left;
+    margin-left: 10px;
+    margin-top: 20px;
+    color: rgb(170, 164, 164);
+}
+
+@media screen and (max-width: 600px) {
+  .column {
+    width: 100%;
+  }
+}

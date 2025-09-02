@@ -1,6 +1,8 @@
+import styles from "../../styles/Footer.module.css"
+
 export default function Footer() {
     return (
-        <footer className="bg-white flex dark:bg-gray-900">
+        <footer className={`${styles.color} flex dark:bg-gray-900`}>
             <div className="mx-auto w-full max-w-screen-xl p-2 py-4 lg:py-6">
                 <div className="md:flex md:justify-between">
                     <div className="mb-4 md:mb-0">

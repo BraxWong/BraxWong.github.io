@@ -9,6 +9,7 @@ const Context = createContext()
 
 export default function Home() {
   return (
+    
     <div className={styles.container}>
       <Head>
         <title> Brax Portfolio </title>
@@ -24,8 +25,8 @@ export default function Home() {
             Brax Portfolio
           </h1>
         </div>
+        <Footer/>
       </div>
-      <Footer/>
     </div>
   );
 }
