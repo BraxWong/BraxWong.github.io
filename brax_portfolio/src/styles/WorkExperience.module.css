@@ -1,0 +1,47 @@
+.text {
+    color: rgb(4, 4, 199);
+    font-size: 25px;
+    font-weight: bold;
+    text-align: center; 
+    padding-top: 20px;
+    font-family: Arial, sans-serif;
+}
+
+.parent {
+    display: grid;
+    place-items: center; 
+    height: 50vh;     
+}
+
+.draegerInfo {
+    border-style: solid;
+    border-color: blue;
+    background-color: lightgrey;
+    border-radius: 10px; 
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.companyDetails {
+    padding-left: 20px;
+    font-weight: bold;
+}
+
+.employedDetails {
+    padding-left: 20px;
+    color: rgb(75, 138, 209);
+}
+
+.jobDescriptions {
+    padding-left: 40px;
+}
+
+.techUsed {
+    padding-left: 20px;
+    font-weight: bold;
+}
+
+.techImg {
+    display: grid;
+    grid-template-columns: 0.05fr 0.05fr 0.05fr 0.05fr 0.05fr 0.05fr 1fr;
+    align-items: right;
+}
