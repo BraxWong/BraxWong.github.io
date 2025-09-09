@@ -31,7 +31,7 @@ export default function Work_Experience() {
                     <div className={styles.jobDescriptions}>
                         <ul>
                             <li>
-                                - Create and implement test cases for application testing using C# and Appium and increased the efficency of the application testing process by 80% with the use of Android Studio's emulators
+                                - Create and implement test cases for application testing using C# and Appium and increased the efficency of the application testing process by 80% with the use of Android Studio Emulators
                             </li>
                             <li>
                                 - Implemented hardware functionalities using C++
