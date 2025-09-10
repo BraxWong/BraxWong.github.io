@@ -10,7 +10,7 @@
 .parent {
     display: grid;
     place-items: center; 
-    height: 50vh;     
+    height: 40vh;     
 }
 
 .draegerInfo {
@@ -19,6 +19,21 @@
     background-color: lightgrey;
     border-radius: 10px; 
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.upcomingJob {
+    text-align: center;
+    width: 50%;
+    transition: background 0.3s ease; /* Smooth transition for background change */
+}
+
+.upcomingJob:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 20px rgba(0, 255, 255, 0.5);
+    background: linear-gradient(to right, #34bcf1, #feb47b); /* Example gradient */
+}
+.plusSign {
+    font-size: 75px;
 }
 
 .companyDetails {
