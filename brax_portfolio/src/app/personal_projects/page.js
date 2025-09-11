@@ -2,7 +2,7 @@
 import Nav from '../Components/nav'
 import Footer from '../Components/footer'
 import { createContext } from 'react';
-import style from "../../styles/PersonalProjects.module.css"
+import styles from "../../styles/PersonalProjects.module.css"
 import AspectRatio from '@mui/joy/AspectRatio';
 import Button from '@mui/joy/Button';
 import Card from '@mui/joy/Card';
@@ -31,7 +31,7 @@ export default function Personal_Projects() {
         },
         {
             title: "Quotation Editor",
-            img: "NA",
+            img: "/QuotationEditor.jpeg",
             link: "https://github.com/BraxWong/QuotationEditor",
         },
         {
@@ -41,14 +41,16 @@ export default function Personal_Projects() {
         },
         {
             title: "Personal Portfolio",
-            img: "NA",
+            img: "/PersonalPortfolio.jpeg",
             link: "https://github.com/BraxWong/BraxWong.github.io",
         },
     ];
     return (
         <div>
             <Nav/>
-            <br/>
+            <h1 className={styles.text}>
+                Personal Projects
+            </h1>
             <div className="gap-2 grid grid-cols-2 sm:grid-cols-3">
                 {list.map((item, index) => (
                     <Card key={index} sx={{ width: '100%' }}>
@@ -68,6 +70,7 @@ export default function Personal_Projects() {
                                 src={item.img}
                                 loading="lazy"
                                 alt=""
+                                style={{ objectFit: 'contain', width: '100%', height: '100%' }}
                             />
                         </AspectRatio>
                         <CardContent orientation="horizontal">
