@@ -18,11 +18,14 @@
     "@heroui/react": "^2.8.2",
     "@heroui/system": "^2.4.22",
     "@heroui/theme": "^2.4.22",
+    "@mui/icons-material": "^7.3.2",
     "@mui/joy": "^5.0.0-beta.52",
+    "@mui/material": "^7.3.2",
     "framer-motion": "^12.23.12",
     "next": "15.5.0",
     "react": "^19.1.0",
-    "react-dom": "^19.1.0"
+    "react-dom": "^19.1.0",
+    "react-router-dom": "^7.9.1"
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3",
