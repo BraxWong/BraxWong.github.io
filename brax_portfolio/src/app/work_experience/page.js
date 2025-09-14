@@ -2,12 +2,26 @@
 import Nav from '../Components/nav'
 import Footer from '../Components/footer'
 import Head from 'next/head'
-import { createContext } from 'react';
+import React, { useEffect } from 'react';
 import styles from "../../styles/WorkExperience.module.css"
 
-const Context = createContext()
 
 export default function Work_Experience() {
+
+    useEffect(() => {
+        const hireMe = document.getElementById("hire-me");
+        if (hireMe) {
+            hireMe.onclick = function () {
+                window.location.href = "mailto:wongbrax@gmail.com";
+            };
+        }
+        return () => {
+            if (hireMe) {
+                hireMe.onclick = null;
+            }
+        };
+    }, []);
+
     return (
         <div>
             <Nav/>
@@ -71,7 +85,7 @@ export default function Work_Experience() {
                     </div>
                 </div>
             </div>
-            <div className={styles.parent}>
+            <div id="hire-me" className={styles.parent}>
                 <div className={`${styles.draegerInfo} ${styles.upcomingJob}`}>
                     <h1 className={styles.plusSign}>
                     +

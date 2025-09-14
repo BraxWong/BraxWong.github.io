@@ -24,14 +24,13 @@
 .upcomingJob {
     text-align: center;
     width: 50%;
-    transition: background 0.3s ease; /* Smooth transition for background change */
+    transition: background 0.3s ease;
 }
 
 .upcomingJob:hover {
     transform: scale(1.05);
     box-shadow: 0 0 20px rgba(0, 255, 255, 0.5);
-    background: linear-gradient(to right, #34bcf1, #feb47b); /* Example gradient */
-}
+    background: linear-gradient(to right, #34bcf1, #feb47b);
 .plusSign {
     font-size: 75px;
 }
@@ -48,6 +47,7 @@
 
 .jobDescriptions {
     padding-left: 40px;
+    font-size: 20px;
 }
 
 .techUsed {
