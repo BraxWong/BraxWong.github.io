@@ -46,7 +46,7 @@ export default function Personal_Projects() {
         },
     ];
     return (
-        <div>
+        <div className='background'>
             <Nav/>
             <h1 className={styles.text}>
                 Personal Projects
