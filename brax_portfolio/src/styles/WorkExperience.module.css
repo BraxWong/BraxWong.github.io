@@ -62,3 +62,12 @@
     grid-template-columns: 0.05fr 0.05fr 0.05fr 0.05fr 0.05fr 0.05fr 1fr;
     align-items: right;
 }
+
+.background {
+    position: absolute; /* Position the image absolutely */
+    top: 0;
+    left: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    object-fit: cover; /* Cover the entire area */
+}
