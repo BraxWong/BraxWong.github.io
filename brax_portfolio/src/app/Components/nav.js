@@ -1,10 +1,10 @@
 import React from 'react';
-import { AppBar, Container, Toolbar, Typography, Box, Button, IconButton, Menu, MenuItem, Avatar } from '@mui/material';
+import { AppBar, Container, Toolbar, Typography, Box, IconButton, Menu, MenuItem, Avatar } from '@mui/material';
 import MenuIcon from '@mui/icons-material/Menu';
 import styles from "../../styles/Nav.module.css";
 
-const pages = ['Home', 'About', 'Work Experience', 'Personal Projects'];
-const redirect = ['/', '/about', '/work_experience', '/personal_projects'];
+const pages = ['Home', 'About', 'Work Experience', 'Personal Projects', 'Resume'];
+const redirect = ['/', '/about', '/work_experience', '/personal_projects', 'https://drive.google.com/file/d/14w9eRQT4ZG44Zl0jBnaPn4LUIuFoQaFU/view?usp=sharing'];
 
 export default function Nav() {
     const [anchorElNav, setAnchorElNav] = React.useState(null);
@@ -74,7 +74,11 @@ export default function Nav() {
                                 <MenuItem
                                     key={page}
                                     onClick={() => {
-                                        window.location.href = redirect[index];
+                                        if(page === "Resume") {
+                                            window.open(redirect[index], '_blank').focus();
+                                        } else {
+                                            window.location.href = redirect[index];
+                                        }
                                         handleCloseNavMenu();
                                     }}
                                     sx={{ my: 2, color: 'black', display: 'block' }}
@@ -108,7 +112,16 @@ export default function Nav() {
                         {pages.map((page, index) => (
                             <MenuItem
                                 key={page}
-                                onClick={() => { window.location.href = redirect[index]; handleCloseNavMenu(); }}
+                                onClick={() => 
+                                    { 
+                                        if(page === "Resume") {
+                                            window.open(redirect[index],'_blank').focus();
+                                        } else {
+                                            window.location.href = redirect[index]; 
+                                        }
+                                        handleCloseNavMenu(); 
+                                    }
+                                }
                                 sx={{ my: 2, color: 'black', display: 'block' }}
                                 className={styles.text}
                             >
@@ -119,7 +132,7 @@ export default function Nav() {
 
                     <Box sx={{ flexGrow: 0 }}>
                         <IconButton>
-                            <Avatar className={styles.icon} alt="Remy Sharp" src="/favicon.ico" />
+                            <Avatar className={styles.icon} alt="Brax Wong" src="/favicon.ico" />
                         </IconButton>
                         <Menu
                             sx={{ mt: '45px' }}

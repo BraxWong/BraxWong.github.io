@@ -1,12 +1,22 @@
 'use client'
 import Nav from '../Components/nav'
 import Footer from '../Components/footer'
-import { createContext } from 'react';
-import React from 'react';
+import React, {useState , createContext } from 'react';
 import { Container, Typography, Box, Button, Avatar } from '@mui/material';
 const Context = createContext()
 
 export default function About() {
+    const [loading,setLoading] = useState(false);
+
+    function sendEmail() {
+        setLoading(true);
+        setTimeout(() => {
+            window.location.href = "mailto:wongbrax@gmail.com";
+            setLoading(false);
+        }, 1000);
+        
+    }
+
     return (
         <div className='background'>
             <Nav/>
@@ -37,8 +47,8 @@ export default function About() {
                             on my career in software development.
                         </Typography>
                         <br/>
-                        <Button variant="contained" color="primary" href="wongbrax@gmail.com">
-                            Contact Me
+                        <Button id="contact_me" onClick={()=> sendEmail()} loading={loading} variant="contained" color="primary">
+                            📧 Contact Me
                         </Button>
                     </Box>
                 </Container>
