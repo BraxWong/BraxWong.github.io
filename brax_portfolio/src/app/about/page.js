@@ -21,24 +21,56 @@ export default function About() {
         <div className='background'>
             <Nav/>
             <Box
-                sx={{
-                    display: 'flex',
-                    justifyContent: 'center',
-                    alignItems: 'center',
-                    height: '70vh'
-                }}
+                sx={{display: 'flex', justifyContent: 'center', alignItems: 'center', 
+                    height: {
+                        xs:'55vh',
+                        sm:'70vh',
+                        md:'70vh',
+                        lg:'70vh',
+                        xl:'70vh',
+                }
+            }}
             >
                 <Container maxWidth="md">
                     <Box display="flex" flexDirection="column" alignItems="center">
                         <Avatar
                             alt="Brax Wong"
                             src="About_Page_Picture.jpeg" 
-                            sx={{ width: 100, height: 100, marginBottom: 2}}
+                            sx={{ width: {
+                                xs:50,
+                                sm:50,
+                                md:100,
+                                lg:100,
+                                xl:100,
+                            }, 
+                            height: {
+                                xs: 50,
+                                sm: 50,
+                                md: 100,
+                                lg: 100,
+                                xl: 100
+                            }, 
+                            marginBottom: 2}}
+                            
                         />
-                        <Typography variant="h3" component="h1" gutterBottom sx={{color: '#f9f9f9', fontWeight: 'bold'}}>
+                        <Typography variant="h3" component="h1" gutterBottom sx={{color: '#f9f9f9', fontWeight: 'bold', 
+                            fontSize: {
+                                xs:22,
+                                sm:22,
+                                md:35,
+                                lg:45,
+                                xl:45,
+                            }
+                        }}>
                             About Me
                         </Typography>
-                        <Typography variant="body1" align="center" sx={{fontSize: 18, color: '#f9f9f9'}}>
+                        <Typography variant="body1" align="center" sx={{ fontSize: {
+                            xs: 13,
+                            sm: 22,
+                            md: 23,
+                            lg: 25,
+                            xl: 25,
+                            }, color: '#f9f9f9'}}>
                             Hello! My name is Brax Wong. I am a recent graduate from the University of Nottingham, where I earned a degree in Computer Science with a 
                             focus on Artificial Intelligence, complemented by a year of industry experience. During my time as a placement student,
                             I gained valuable hands-on experience as an embedded software engineer, working on innovative projects that honed  my technical skills 

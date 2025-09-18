@@ -37,6 +37,18 @@
   z-index: 1;
 }
 
+@media (max-width: 768px) {
+  .title {
+    font-size: 5rem; 
+  }
+}
+
+@media (max-width: 480px) {
+  .title {
+    font-size: 4rem;
+  }
+}
+
 @keyframes animate-background {
     0% {
         background-position: 0 50%;
