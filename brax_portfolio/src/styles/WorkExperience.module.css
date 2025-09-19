@@ -1,73 +1,30 @@
-.text {
-    color: #f9f9f9;
-    font-size: 30px;
-    font-weight: bold;
-    text-align: center; 
-    padding-top: 20px;
-    font-family: Arial, sans-serif;
+.container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: var(--background);
 }
 
-.parent {
-    display: grid;
-    place-items: center; 
-    height: 40vh;     
+.experienceCard {
+    margin: 20px 0;
+    width: 100%;
 }
 
-.draegerInfo {
-    border-style: solid;
-    border-color: blue;
-    background-color: lightgrey;
-    border-radius: 10px; 
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-}
-
-.upcomingJob {
-    text-align: center;
-    width: 50%;
-    transition: background 0.3s ease;
-}
-
-.upcomingJob:hover {
-    transform: scale(1.05);
-    box-shadow: 0 0 20px rgba(0, 255, 255, 0.5);
-    background: linear-gradient(to right, #34bcf1, #feb47b);
-}
-
-.plusSign {
-    font-size: 75px;
-}
-
-.companyDetails {
-    padding-left: 20px;
+.companyName {
     font-weight: bold;
 }
 
-.employedDetails {
-    padding-left: 20px;
-    color: rgb(75, 138, 209);
+.dateLocation {
+    margin: 1rem 0;
 }
 
-.jobDescriptions {
-    padding-left: 40px;
-    font-size: 20px;
+.jobDescriptionsTitle, .techUsedTitle {
+    margin-top: 1.5rem;
+    font-weight: 600;
 }
 
-.techUsed {
-    padding-left: 20px;
-    font-weight: bold;
-}
-
-.techImg {
-    display: grid;
-    grid-template-columns: 0.05fr 0.05fr 0.05fr 0.05fr 0.05fr 0.05fr 1fr;
-    align-items: right;
-}
-
-.background {
-    position: absolute; /* Position the image absolutely */
-    top: 0;
-    left: 0;
-    width: 100%; /* Full width */
-    height: 100%; /* Full height */
-    object-fit: cover; /* Cover the entire area */
+.techIcons {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1rem;
 }

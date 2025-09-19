@@ -1,60 +1,74 @@
 'use client'
-import Nav from '../Components/nav'
-import Footer from '../Components/footer'
+
 import React from 'react';
-import styles from "../../styles/WorkExperience.module.css"
+import { Container, Typography, Card, CardContent, List, ListItem, ListItemIcon } from '@mui/material';
+import Nav from '../Components/nav'
+import styles from '../../styles/WorkExperience.module.css'
 
-
-export default function Work_Experience() {
-
+export default function WorkExperience() {
     return (
-        <div className='background'>
-            <Nav/>
-            <h1 className={styles.text}>
-                Work Experience 
-            </h1>
-            <div className={styles.parent}>
-                <div className={styles.draegerInfo}>
-                    <div className={styles.companyDetails}>
-                        <h2>
-                        Draeger Safety UK Ltd 
-                        </h2>
-                        <h2>
+        <div className={`${styles.container} background`}>
+            <Nav />
+            <Container maxWidth="md" className={styles.background}>
+                <Typography variant="h3" align="center" gutterBottom>
+                    Work Experience
+                </Typography>
+                <Card variant="outlined" className={styles.experienceCard}>
+                    <CardContent>
+                        <Typography variant="h5" className={styles.companyName}>
+                            Draeger Safety UK Ltd
+                        </Typography>
+                        <Typography variant="subtitle1" color="textSecondary">
                             Embedded Software Engineer - Student Placement
-                        </h2>
-                    </div>
-                    <h2 className={styles.employedDetails}>
-                        📅 07/2023 - 06/2024   📍Blyth, Newcastle
-                    </h2>
-                    <br/>
-                    <div className={styles.jobDescriptions}>
-                        <ul>
-                            <li>
-                                - Create and implement test cases for application testing using C# and Appium and increased the efficency of the application testing process by 80% with the use of Android Studio Emulators
-                            </li>
-                            <li>
-                                - Implemented hardware functionalities using C++
-                            </li>
-                            <li>
-                                - Developed and refactored hardware firmware and configuration update software using C# and WPF
-                            </li>
-                            <li>
-                                - Created and maintained REST-API using NodeJS
-                            </li>
-                            <li>
-                                - Setting up Azure Pipeline and agents for automated testing and local artifacts deployment
-                            </li>
-                            <li>
-                                - Create an appealing web portal for communication between hardware and users
-                            </li>
-                        </ul>
-                    </div>
-                    <br/>
-                    <div className={styles.techUsed}>
-                        <h1>
-                            Technology Used
-                        </h1>
-                        <div className={styles.techImg}>
+                        </Typography>
+                        <Typography variant="body2" className={styles.dateLocation}>
+                            📅 07/2023 - 06/2024 📍 Blyth, Newcastle
+                        </Typography>
+                        <Typography variant="h6" className={styles.jobDescriptionsTitle}>
+                            Job Responsibilities
+                        </Typography>
+                        <List>
+                            <ListItem>
+                                <ListItemIcon>✔️</ListItemIcon>
+                                <Typography>
+                                    Created and implemented test cases for application testing using C# and Appium, increasing efficiency by 80% with Android Studio Emulators.
+                                </Typography>
+                            </ListItem>
+                            <ListItem>
+                                <ListItemIcon>✔️</ListItemIcon>
+                                <Typography>
+                                    Implemented hardware functionalities using C++.
+                                </Typography>
+                            </ListItem>
+                            <ListItem>
+                                <ListItemIcon>✔️</ListItemIcon>
+                                <Typography>
+                                    Developed and refactored firmware and configuration update software using C# and WPF.
+                                </Typography>
+                            </ListItem>
+                            <ListItem>
+                                <ListItemIcon>✔️</ListItemIcon>
+                                <Typography>
+                                    Created and maintained REST-API using NodeJS.
+                                </Typography>
+                            </ListItem>
+                            <ListItem>
+                                <ListItemIcon>✔️</ListItemIcon>
+                                <Typography>
+                                    Set up Azure Pipeline and agents for automated testing and deployment.
+                                </Typography>
+                            </ListItem>
+                            <ListItem>
+                                <ListItemIcon>✔️</ListItemIcon>
+                                <Typography>
+                                    Designed an appealing web portal for communication between hardware and users.
+                                </Typography>
+                            </ListItem>
+                        </List>
+                        <Typography variant="h6" className={styles.techUsedTitle}>
+                            Technologies Used
+                        </Typography>
+                        <div className={styles.techIcons}>
                             <svg width="64px" height="64px" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" strokeWidth="0"></g><g id="SVGRepo_tracerCarrier" strokeLinecap="round" strokeLinejoin="round"></g><g id="SVGRepo_iconCarrier"> <path fillRule="evenodd" clipRule="evenodd" d="M13.0164 2C10.8193 2 9.03825 3.72453 9.03825 5.85185V8.51852H15.9235V9.25926H5.97814C3.78107 9.25926 2 10.9838 2 13.1111L2 18.8889C2 21.0162 3.78107 22.7407 5.97814 22.7407H8.27322V19.4815C8.27322 17.3542 10.0543 15.6296 12.2514 15.6296H19.5956C21.4547 15.6296 22.9617 14.1704 22.9617 12.3704V5.85185C22.9617 3.72453 21.1807 2 18.9836 2H13.0164ZM12.0984 6.74074C12.8589 6.74074 13.4754 6.14378 13.4754 5.40741C13.4754 4.67103 12.8589 4.07407 12.0984 4.07407C11.3378 4.07407 10.7213 4.67103 10.7213 5.40741C10.7213 6.14378 11.3378 6.74074 12.0984 6.74074Z" fill="url(#paint0_linear_87_8204)"></path> <path fillRule="evenodd" clipRule="evenodd" d="M18.9834 30C21.1805 30 22.9616 28.2755 22.9616 26.1482V23.4815L16.0763 23.4815L16.0763 22.7408L26.0217 22.7408C28.2188 22.7408 29.9998 21.0162 29.9998 18.8889V13.1111C29.9998 10.9838 28.2188 9.25928 26.0217 9.25928L23.7266 9.25928V12.5185C23.7266 14.6459 21.9455 16.3704 19.7485 16.3704L12.4042 16.3704C10.5451 16.3704 9.03809 17.8296 9.03809 19.6296L9.03809 26.1482C9.03809 28.2755 10.8192 30 13.0162 30H18.9834ZM19.9015 25.2593C19.1409 25.2593 18.5244 25.8562 18.5244 26.5926C18.5244 27.329 19.1409 27.9259 19.9015 27.9259C20.662 27.9259 21.2785 27.329 21.2785 26.5926C21.2785 25.8562 20.662 25.2593 19.9015 25.2593Z" fill="url(#paint1_linear_87_8204)"></path> <defs> <linearGradient id="paint0_linear_87_8204" x1="12.4809" y1="2" x2="12.4809" y2="22.7407" gradientUnits="userSpaceOnUse"> <stop stopColor="#327EBD"></stop> <stop offset="1" stopColor="#1565A7"></stop> </linearGradient> <linearGradient id="paint1_linear_87_8204" x1="19.519" y1="9.25928" x2="19.519" y2="30" gradientUnits="userSpaceOnUse"> <stop stopColor="#FFDA4B"></stop> <stop offset="1" stopColor="#F9C600"></stop> </linearGradient> </defs> </g></svg>
                             <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="64" height="64" viewBox="0 0 48 48">
 <path fill="#00549d" fillRule="evenodd" d="M22.903,3.286c0.679-0.381,1.515-0.381,2.193,0 c3.355,1.883,13.451,7.551,16.807,9.434C42.582,13.1,43,13.804,43,14.566c0,3.766,0,15.101,0,18.867 c0,0.762-0.418,1.466-1.097,1.847c-3.355,1.883-13.451,7.551-16.807,9.434c-0.679,0.381-1.515,0.381-2.193,0 c-3.355-1.883-13.451-7.551-16.807-9.434C5.418,34.899,5,34.196,5,33.434c0-3.766,0-15.101,0-18.867 c0-0.762,0.418-1.466,1.097-1.847C9.451,10.837,19.549,5.169,22.903,3.286z" clipRule="evenodd"></path><path fill="#0086d4" fillRule="evenodd" d="M5.304,34.404C5.038,34.048,5,33.71,5,33.255 c0-3.744,0-15.014,0-18.759c0-0.758,0.417-1.458,1.094-1.836c3.343-1.872,13.405-7.507,16.748-9.38 c0.677-0.379,1.594-0.371,2.271,0.008c3.343,1.872,13.371,7.459,16.714,9.331c0.27,0.152,0.476,0.335,0.66,0.576L5.304,34.404z" clipRule="evenodd"></path><path fill="#fff" fillRule="evenodd" d="M24,10c7.727,0,14,6.273,14,14s-6.273,14-14,14 s-14-6.273-14-14S16.273,10,24,10z M24,17c3.863,0,7,3.136,7,7c0,3.863-3.137,7-7,7s-7-3.137-7-7C17,20.136,20.136,17,24,17z" clipRule="evenodd"></path><path fill="#0075c0" fillRule="evenodd" d="M42.485,13.205c0.516,0.483,0.506,1.211,0.506,1.784 c0,3.795-0.032,14.589,0.009,18.384c0.004,0.396-0.127,0.813-0.323,1.127L23.593,24L42.485,13.205z" clipRule="evenodd"></path><path fill="#fff" fillRule="evenodd" d="M31 21H33V27H31zM38 21H40V27H38z" clipRule="evenodd"></path><path fill="#fff" fillRule="evenodd" d="M29 23H35V25H29zM36 23H42V25H36z" clipRule="evenodd"></path>
@@ -67,10 +81,9 @@ export default function Work_Experience() {
         </svg>
                             <svg id="uuid-2a57d3d0-4991-466e-9a94-c89748173b8d" height="64" width="64" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18 18"><defs><linearGradient id="uuid-9468b865-eac4-4ff2-b5b6-2babfb3374f2" x1="5.909" y1="2.691" x2="5.909" y2="13.239" gradientUnits="userSpaceOnUse"><stop offset="0" stopColor="#5ea0ef"/><stop offset=".178" stopColor="#559cec"/><stop offset=".472" stopColor="#3c91e5"/><stop offset=".844" stopColor="#1380da"/><stop offset="1" stopColor="#0078d4"/></linearGradient><linearGradient id="uuid-3ad1fb1c-b576-4203-8afc-a0b652002d39" x1="10.12" y1="13.294" x2="10.12" y2="7.819" gradientUnits="userSpaceOnUse"><stop offset="0" stopColor="#46a0de"/><stop offset="1" stopColor="#8dc8e8"/></linearGradient><linearGradient id="uuid-8bf92bc2-af51-4860-95b1-96ac950961e9" x1="15.96" y1="13.294" x2="15.96" y2="7.819" gradientUnits="userSpaceOnUse"><stop offset="0" stopColor="#46a0de"/><stop offset="1" stopColor="#8dc8e8"/></linearGradient><linearGradient id="uuid-39eb49ae-4371-40af-be57-402d26cef923" x1="13.04" y1="12.564" x2="13.04" y2="8.549" gradientUnits="userSpaceOnUse"><stop offset="0" stopColor="#155ea1"/><stop offset="1" stopColor="#0078d4"/></linearGradient></defs><path d="M7.652,13.165c.004-.352.014-.58.03-.677.123-.733.602-1.294,1.244-1.502.005-.002.008-.006.008-.011v-2.377c0-.602.427-1.145,1.024-1.224.56-.075,1.058.245,1.257.719h.407l-.484-.485c-.326-.326-.326-.854,0-1.179l.68-.681c-.516-1.816-2.213-3.116-4.181-3.055-1.835-.033-3.49,1.096-4.129,2.816-1.959.237-3.45,1.87-3.508,3.842.088,2.228,1.962,3.966,4.19,3.885.124,0,.251-.006.368-.016h3.096c0-.019-.003-.037-.003-.056Z" fill="url(#uuid-9468b865-eac4-4ff2-b5b6-2babfb3374f2)"/><g><path d="M14.915,13.958l-1.091-1.091c-.074-.074-.185-.096-.282-.056s-.16.134-.16.239v.64h-3.903c-.289,0-.523-.235-.523-.523,0-.091.006-.427.014-.48.052-.3.247-.487.509-.487h.458l-.062-.23c-.039-.146-.067-.298-.084-.452l-.019-.163h-.294c-.674.002-1.228.499-1.346,1.209-.02.114-.024.602-.024.607,0,.366.143.71.402.969.259.258.603.401.968.401h3.904v.692c0,.105.063.199.16.239.032.013.066.02.099.02.067,0,.133-.026.183-.076l1.091-1.091c.101-.101.101-.266,0-.367Z" fill="#155ea1"/><path d="M17.781,7.021c-.259-.258-.603-.401-.968-.401h-3.904v-.692c0-.105-.063-.199-.16-.239-.098-.04-.208-.018-.282.056l-1.091,1.091c-.101.101-.101.266,0,.367l1.091,1.091c.074.075.185.097.282.056.097-.04.16-.134.16-.239v-.64h3.903c.288,0,.523.235.523.523,0,.085-.007.429-.014.48-.052.301-.247.487-.509.487h-.458l.061.23c.039.149.068.302.084.453l.019.163h.294c.674-.002,1.228-.499,1.347-1.21.018-.11.024-.6.024-.606,0-.366-.143-.71-.402-.969Z" fill="#155ea1"/><g><path d="M9.39,8.549c0-.427.366-.768.802-.727.38.036.658.377.658.758v3.952c0,.381-.279.722-.658.758-.435.042-.802-.3-.802-.727v-4.015Z" fill="url(#uuid-3ad1fb1c-b576-4203-8afc-a0b652002d39)"/><path d="M15.23,8.549c0-.427.366-.768.802-.727.38.036.658.377.658.758v3.952c0,.381-.279.722-.658.758-.435.042-.802-.3-.802-.727v-4.015Z" fill="url(#uuid-8bf92bc2-af51-4860-95b1-96ac950961e9)"/><rect x="11.398" y="8.549" width="3.285" height="4.015" fill="url(#uuid-39eb49ae-4371-40af-be57-402d26cef923)"/></g></g></svg>
                         </div>
-                    </div>
-                </div>
-            </div>
-            <Footer/>
+                    </CardContent>
+                </Card>
+            </Container>
         </div>
     );
 }

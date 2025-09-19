@@ -1,6 +1,5 @@
 'use client'
 import Nav from '../Components/nav'
-import Footer from '../Components/footer'
 import { createContext } from 'react';
 import styles from "../../styles/PersonalProjects.module.css"
 import AspectRatio from '@mui/joy/AspectRatio';
@@ -88,7 +87,6 @@ export default function Personal_Projects() {
                     </Card>
                 ))}
             </div>
-            <Footer/>
         </div>
     );
 }
